@@ -22,5 +22,14 @@ namespace RestCustomerService
             )]
         IList<Customer> GetCustomers();
 
+
+        [OperationContract]
+        [WebInvoke(
+            Method = "GET",
+            ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "Customers/{id}"
+        )]
+        Customer GetCustomerID(string id);
+
     }
 }

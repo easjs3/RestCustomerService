@@ -16,9 +16,15 @@ namespace RestCustomerService.Tests
         [TestMethod()]
         public void GetCustomersTest()
         {
+            //bemærk denne test vil fejle hvis vi har mere end 2 men på nuværende tidspunkt har vi kun 2
+
+
             //arrange
+            CustomerService service = new CustomerService();
             //act
+            int minint = service.GetCustomers().Count;
             //assert
+            Assert.AreEqual(2,minint);
         }
     }
 }

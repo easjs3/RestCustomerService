@@ -5,6 +5,11 @@ using System.Web;
 
 namespace RestCustomerService
 {
+    /// <summary>
+    /// person indeholder ID, Firstname, LastName, Year
+    /// der er ctor og ctor med ID FirstName LastName Year
+    /// tostring er overskrevet brug den for fuld udskrivning
+    /// </summary>
     public class Customer
     {
         public int Id { get; set; }

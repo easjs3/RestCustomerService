@@ -8,6 +8,11 @@ using Newtonsoft.Json;
 
 namespace RestCustomerClient
 {
+    /// <summary>
+    /// person indeholder ID, Firstname, LastName, Year
+    /// der er ctor og ctor med ID FirstName LastName Year
+    /// tostring er overskrevet brug den for fuld udskrivning
+    /// </summary>
     class Customer
     {
 
