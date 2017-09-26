@@ -10,24 +10,13 @@ namespace RestCustomerService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class Service1 : IService1
+    public class CustomerService : ICustomerService
     {
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
+     private static List<Customer> cList = new List<Customer>(){new Customer(1,"navn","lastname",2000), new Customer(2, "navn", "hej", 2222) };
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public IList<Customer> GetCustomers()
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            return  cList;
         }
     }
 }
